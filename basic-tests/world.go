@@ -4,5 +4,8 @@ const greeting string = "hello"
 
 // World returns simple string
 func World(name string) string {
-	return greeting + name
+	if len(name) > 0 {
+		return greeting + name
+	}
+	return greeting + " world!"
 }
