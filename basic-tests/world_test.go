@@ -32,10 +32,17 @@ func TestWorld(t *testing.T) {
 		assertCorrectMessage(t, got, want)
 	})
 
-	t.Run("Say hello French", func(t *testing.T) {
+	t.Run("Say hello in French", func(t *testing.T) {
 
 		got := World(" kate", "French")
 		want := "bonjour kate"
+		assertCorrectMessage(t, got, want)
+	})
+
+	t.Run("Say hello in German", func(t *testing.T) {
+
+		got := World(" kate", "German")
+		want := "hallo kate"
 		assertCorrectMessage(t, got, want)
 	})
 }
