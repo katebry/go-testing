@@ -1,4 +1,6 @@
-package hello
+package greet
+
+import "fmt"
 
 const englishGreeting string = "hello"
 const spanishGreeting string = "hola"
@@ -9,12 +11,14 @@ const spanish = "Spanish"
 const french = "French"
 const german = "German"
 
-// World returns simple string
-func World(name string, language string) string {
+// Greeter returns a greeting in the relevant language
+func Greeter(name string, language string) string {
 	if name == "" {
 		name = " world"
 	}
-	return greetingPrefix(language) + name
+	greeting := greetingPrefix(language) + " " + name
+	fmt.Println(greeting)
+	return greeting
 }
 
 func greetingPrefix(language string) (prefix string) {
