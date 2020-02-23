@@ -17,7 +17,7 @@ func Greeter(name string, language string) string {
 		name = " world"
 	}
 	greeting := greetingPrefix(language) + " " + name
-	fmt.Println("Return value of GreeterFunction: \n", greeting)
+	fmt.Println("Return value of Greeter: \n", greeting)
 	return greeting
 }
 
